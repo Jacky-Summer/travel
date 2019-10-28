@@ -85,6 +85,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+    @import '~styles/variables.styl'
+    @import '~styles/mixins.styl'
     .icons
         height 0
         padding-bottom 50%
@@ -118,4 +120,5 @@ export default {
             height .44rem
             line-height .44rem
             text-align center
+            ellipsis()
 </style>
