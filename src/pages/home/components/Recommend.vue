@@ -2,7 +2,7 @@
     <div>
         <div class='title'>热销推荐</div>
         <ul>
-            <li class="item border-bottom" v-for="item in recommendList" :key="item.id">
+            <li class="item border-bottom" v-for="item in list" :key="item.id">
                 <img class="item-img" :src="item.imgUrl" alt="">
                 <div class="item-info">
                     <p class="item-title">{{ item.title }}</p>
@@ -17,34 +17,11 @@
 <script>
 export default {
   name: 'HomeRecommend',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      'recommendList': [{
-        'id': '0001',
-        'imgUrl': 'https://imgs.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_228x168_25032819.jpg',
-        'title': '故宫',
-        'desc': '东方宫殿建筑代表，世界宫殿建筑典范'
-      }, {
-        'id': '0002',
-        'imgUrl': 'https://imgs.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_228x168_25032819.jpg',
-        'title': '南山滑雪场',
-        'desc': '北京专业级滑雪圣地'
-      }, {
-        'id': '0003',
-        'imgUrl': 'https://imgs.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_228x168_25032819.jpg',
-        'title': '天安门广场',
-        'desc': '我爱北京天安门，天安门上太阳升'
-      }, {
-        'id': '0004',
-        'imgUrl': 'https://imgs.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_228x168_25032819.jpg',
-        'title': '水立方',
-        'desc': '中国的荣耀，阳光下的晶莹水滴'
-      }, {
-        'id': '0005',
-        'imgUrl': 'https://imgs.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_228x168_25032819.jpg',
-        'title': '温都水城养生馆',
-        'desc': '各种亚热带植物掩映其间仿佛置身热带雨林'
-      }]
     }
   }
 }

@@ -4,7 +4,7 @@
             <swiper-slide  v-for="(page, index) in pages" :key="index">
                 <div class="icon" v-for="item in page" :key="item.id">
                     <div class="icon-img">
-                        <img class='icon-img-content' :src="item.iconUrl"/>
+                        <img class='icon-img-content' :src="item.imgUrl"/>
                     </div>
                     <p class="icon-desc">{{ item.desc }}</p>
                 </div>
@@ -16,62 +16,20 @@
 <script>
 export default {
   name: 'HomeIcons',
+  props: {
+    list: Array
+  },
   data () {
     return {
       swiperOption: {
         autoplay: false
-      },
-      iconsList: [{
-        id: '0001',
-        iconUrl: 'http://s.qunarzz.com/homenode/images/touchheader/hotel.png',
-        desc: '热门酒店'
-      }, {
-        id: '0002',
-        iconUrl: 'http://s.qunarzz.com/homenode/images/touchheader/flight.png',
-        desc: '订购机票'
-      }, {
-        id: '0003',
-        iconUrl: 'http://s.qunarzz.com/homenode/images/touchheader/package.png',
-        desc: '休闲度假'
-      }, {
-        id: '0004',
-        iconUrl: 'http://s.qunarzz.com/homenode/images/touchheader/train.png',
-        desc: '买火车票'
-      }, {
-        id: '0005',
-        iconUrl: 'http://s.qunarzz.com/homenode/images/touchheader/piao.png',
-        desc: '景点门票'
-      }, {
-        id: '0006',
-        iconUrl: 'http://s.qunarzz.com/homenode/images/touchheader/train.png',
-        desc: '买火车票'
-      }, {
-        id: '0007',
-        iconUrl: 'http://s.qunarzz.com/homenode/images/touchheader/package.png',
-        desc: '休闲度假'
-      }, {
-        id: '0008',
-        iconUrl: 'http://s.qunarzz.com/homenode/images/touchheader/flight.png',
-        desc: '订购机票'
-      }, {
-        id: '0009',
-        iconUrl: 'http://s.qunarzz.com/homenode/images/touchheader/hotel.png',
-        desc: '热门酒店'
-      }, {
-        id: '0010',
-        iconUrl: 'http://s.qunarzz.com/homenode/images/touchheader/flight.png',
-        desc: '订购机票'
-      }, {
-        id: '0011',
-        iconUrl: 'http://s.qunarzz.com/homenode/images/touchheader/package.png',
-        desc: '休闲度假'
-      }]
+      }
     }
   },
   computed: {
     pages () {
       const pages = []
-      this.iconsList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []

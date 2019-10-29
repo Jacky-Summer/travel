@@ -2,7 +2,7 @@
     <div>
         <div class='title'>周末去哪儿</div>
         <ul>
-            <li class="item border-bottom" v-for="item in WeekendList" :key="item.id">
+            <li class="item border-bottom" v-for="item in list" :key="item.id">
                 <div class="item-img-wrapper">
                     <img class="item-img" :src="item.imgUrl" alt="">
                 </div>
@@ -18,34 +18,11 @@
 <script>
 export default {
   name: 'HomeWeekend',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      'WeekendList': [{
-        'id': '0001',
-        'imgUrl': '//mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20199/387c5e767cccc7a3172ed7ea15b50727.png',
-        'title': '故宫',
-        'desc': '东方宫殿建筑代表，世界宫殿建筑典范'
-      }, {
-        'id': '0002',
-        'imgUrl': '//mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20199/387c5e767cccc7a3172ed7ea15b50727.png',
-        'title': '南山滑雪场',
-        'desc': '北京专业级滑雪圣地'
-      }, {
-        'id': '0003',
-        'imgUrl': '//mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20199/387c5e767cccc7a3172ed7ea15b50727.png',
-        'title': '天安门广场',
-        'desc': '我爱北京天安门，天安门上太阳升'
-      }, {
-        'id': '0004',
-        'imgUrl': '//mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20199/387c5e767cccc7a3172ed7ea15b50727.png',
-        'title': '水立方',
-        'desc': '中国的荣耀，阳光下的晶莹水滴'
-      }, {
-        'id': '0005',
-        'imgUrl': '//mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20199/387c5e767cccc7a3172ed7ea15b50727.png',
-        'title': '温都水城养生馆',
-        'desc': '各种亚热带植物掩映其间仿佛置身热带雨林'
-      }]
     }
   }
 }
