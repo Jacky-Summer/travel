@@ -45,9 +45,13 @@ export default {
       }
     }
   },
-  mounted () {
+  activated () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
+
 }
 </script>
 
