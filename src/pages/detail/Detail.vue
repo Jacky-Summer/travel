@@ -43,7 +43,6 @@ export default {
     handleGetDataSucc (res) {
       res = res.data
       if (res.ret && res.data) {
-        console.log(res)
         const data = res.data
         this.bannerImg = data.bannerImg
         this.categoryList = data.categoryList
