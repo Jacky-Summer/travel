@@ -2,6 +2,15 @@
 
 > imitate qunaer app
 
+## shows
+
+完成的部分功能效果图如下
+
+<p align="center">
+	<img src="https://github.com/Jacky-Summer/travel/blob/master/gif_demo/index.gif" alt=""  width="400">
+    <img src="https://github.com/Jacky-Summer/travel/blob/master/gif_demo/city.gif" alt=""  width="400">
+</p>
+
 ## Build Setup
 
 ``` bash
