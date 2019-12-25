@@ -45,10 +45,10 @@ export default {
       }
     }
   },
-  activated () {
+  mounted () {
     window.addEventListener('scroll', this.handleScroll)
   },
-  deactivated () {
+  unmounted () {
     window.removeEventListener('scroll', this.handleScroll)
   }
 
@@ -78,7 +78,6 @@ export default {
         height $headerHeight
         line-height $headerHeight
         background $bgColor
-        z-index: 2
         color #fff
         text-align center
         font-size .32rem
