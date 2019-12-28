@@ -3,10 +3,10 @@
 > imitate qunaer app
 
 ## 技术栈
-Vue：Vue、Vue-router、Vuex、Vue-cli
-插件：vue-awesome-swiper、better-scroll
-CSS的预处理框架：stylus
-API：利用mock数据，通过proxyTable配置访问本地API路径
+1. Vue：Vue、Vue-router、Vuex、Vue-cli
+2. 插件：vue-awesome-swiper、better-scroll
+3. CSS的预处理框架：stylus
+4. API：利用mock数据，通过proxyTable配置访问本地API路径
 
 ## 项目特点
 
